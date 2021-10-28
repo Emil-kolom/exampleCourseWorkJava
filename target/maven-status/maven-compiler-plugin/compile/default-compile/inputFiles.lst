@@ -1,2 +1,16 @@
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/dao/CarModelDAO.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/model/CarModel.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/config/HibernateConfig.java
 /home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/config/WebConfig.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/dao/jdbc/CarModelDAOJdbcImpl.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/dao/jpa/CarBrandDAOJpaImpl.java
 /home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/config/AppInit.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/dao/hibernate/CarModelDAOHibernateImpl.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/dao/CarBrandDAO.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/config/JdbcConfig.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/dao/jpa/CarModelDAOJpaImpl.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/config/DataSourceConfig.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/dao/jdbc/CarBrandDAOJdbcImpl.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/dao/hibernate/CarBrandDAOHibernateImpl.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/config/JpaConfig.java
+/home/emil/Work/example-3course-apache-tomcat/project2/src/main/java/edu/javavt19/model/CarBrand.java
