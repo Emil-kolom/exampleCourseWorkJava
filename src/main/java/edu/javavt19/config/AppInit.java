@@ -2,7 +2,7 @@ package edu.javavt19.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class AppInt extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
     // Этот метод должен содержать конфигурации которые инициализируют Beans
     // для инициализации бинов у нас использовалась аннотация @Bean
     @Override
