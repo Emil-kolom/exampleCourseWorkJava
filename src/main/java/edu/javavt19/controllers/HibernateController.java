@@ -38,7 +38,7 @@ public class HibernateController {
 
         model.addAttribute("listCarModel",listCarModel);
         model.addAttribute("listCarBrand",listCarBrand);
-        return "content";
+        return "/content";
     }
 
     //CRUD operations with CarBrand entity
@@ -50,7 +50,7 @@ public class HibernateController {
         CarBrand carBrand = new CarBrand();
         model.addAttribute("carBrand", carBrand);
 
-        return "brandForm";
+        return "/brandForm";
     }
 
     @RequestMapping(value = { "/"+INSTRUMENT+"/newBrand" }, method = RequestMethod.POST)
@@ -74,7 +74,7 @@ public class HibernateController {
         CarBrand carBrand = carBrandService.get(idBrand);
         model.addAttribute("carBrand", carBrand);
         model.addAttribute("edit", true);
-        return "brandForm";
+        return "/brandForm";
     }
 
     @RequestMapping(value = {  "/"+INSTRUMENT+"/edit-brand/{idBrand}" }, method = RequestMethod.POST)
@@ -95,7 +95,7 @@ public class HibernateController {
         model.addAttribute("listCarBrand", listCarBrand);
         model.addAttribute("carModel", carModel);
 
-        return "modelForm";
+        return "/modelForm";
     }
 
     @RequestMapping(value = { "/"+INSTRUMENT+"/newModel" }, method = RequestMethod.POST)
@@ -124,7 +124,7 @@ public class HibernateController {
         model.addAttribute("carModel", carModel);
         model.addAttribute("listCarBrand", listCarBrand);
 
-        return "modelForm";
+        return "/modelForm";
     }
 
     @RequestMapping(value = {  "/"+INSTRUMENT+"/edit-model/{idModel}" }, method = RequestMethod.POST)
