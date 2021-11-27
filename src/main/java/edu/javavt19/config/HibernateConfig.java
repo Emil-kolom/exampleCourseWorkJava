@@ -6,12 +6,13 @@ import edu.javavt19.dao.hibernate.CarBrandDAOHibernateImpl;
 import edu.javavt19.dao.hibernate.CarModelDAOHibernateImpl;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.orm.hibernate4.HibernateTransactionManager;
-import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
@@ -29,13 +30,14 @@ public class HibernateConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setPackagesToScan(new String[] { "edu.javavt19.model" });
+        sessionFactory.setPackagesToScan(new String[] { "edu.javavt19.model.hibernate" });
         return sessionFactory;
     }
 
+
     @Bean
     @Autowired
-    public HibernateTransactionManager hibernateTransactionManager(SessionFactory s) {
+    public HibernateTransactionManager hibernateTransactionManager( SessionFactory s) {
         HibernateTransactionManager txManager = new HibernateTransactionManager();
         txManager.setSessionFactory(s);
         return txManager;

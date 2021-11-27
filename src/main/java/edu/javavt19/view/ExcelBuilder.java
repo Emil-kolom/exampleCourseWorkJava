@@ -1,3 +1,4 @@
+
 package edu.javavt19.view;
 
 import java.util.List;
@@ -6,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import edu.javavt19.model.CarBrand;
 import edu.javavt19.model.CarModel;
-import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -37,15 +37,15 @@ public class ExcelBuilder extends AbstractPOIExcelView {
         sheet.setColumnWidth(3,10000);
 
         Font font = workbook.createFont();
-        font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
-        font.setColor(HSSFColor.WHITE.index);
+        font.setBold(true);
+        font.setColor(HSSFColor.HSSFColorPredefined.WHITE.getIndex());
         font.setFontName("Helvetica");
 
         CellStyle headerStyle = workbook.createCellStyle();
-        headerStyle.setFillForegroundColor(HSSFColor.GREY_40_PERCENT.index);
-        headerStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);
+        headerStyle.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_40_PERCENT.getIndex());
+        headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
         headerStyle.setFont(font);
-        headerStyle.setAlignment(CellStyle.ALIGN_CENTER);
+        headerStyle.setAlignment(HorizontalAlignment.CENTER);
 
         // create header row
         Row headerRow = sheet.createRow(0);
@@ -62,7 +62,7 @@ public class ExcelBuilder extends AbstractPOIExcelView {
         headerRow.getCell(3).setCellStyle(headerStyle);
 
         CellStyle rowCellStyle = workbook.createCellStyle();
-        rowCellStyle.setAlignment(CellStyle.ALIGN_CENTER);
+        rowCellStyle.setAlignment(HorizontalAlignment.CENTER);
         // create data rows
         int rowCount = 1;
         for (CarBrand carBrand : carBrands) {
@@ -95,15 +95,15 @@ public class ExcelBuilder extends AbstractPOIExcelView {
         sheet.setColumnWidth(7,2500);
 
         Font font = workbook.createFont();
-        font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
-        font.setColor(HSSFColor.WHITE.index);
+        font.setBold(true);
+        font.setColor(HSSFColor.HSSFColorPredefined.WHITE.getIndex());
         font.setFontName("Helvetica");
 
         CellStyle headerStyle = workbook.createCellStyle();
-        headerStyle.setFillForegroundColor(HSSFColor.GREY_40_PERCENT.index);
-        headerStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);
+        headerStyle.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_40_PERCENT.getIndex());
+        headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
         headerStyle.setFont(font);
-        headerStyle.setAlignment(CellStyle.ALIGN_CENTER);
+        headerStyle.setAlignment(HorizontalAlignment.CENTER);
 
         // create header row
         Row headerRow = sheet.createRow(0);
@@ -132,7 +132,7 @@ public class ExcelBuilder extends AbstractPOIExcelView {
         headerRow.getCell(7).setCellStyle(headerStyle);
 
         CellStyle rowCellStyle = workbook.createCellStyle();
-        rowCellStyle.setAlignment(CellStyle.ALIGN_CENTER);
+        rowCellStyle.setAlignment(HorizontalAlignment.CENTER);
         // create data rows
         int rowCount = 1;
         for (CarModel carModel : carModels) {
@@ -162,5 +162,4 @@ public class ExcelBuilder extends AbstractPOIExcelView {
             row.getCell(7).setCellStyle(rowCellStyle);
         }
     }
-
 }
